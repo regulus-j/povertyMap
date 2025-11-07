@@ -53,6 +53,8 @@ workflow_methodology.html
 !data/.gitkeep
 !data/satellite_imagery/.gitkeep
 !notebooks/.gitkeep
+!output/catBoost/
+!output/catBoost/**
 
 # OS and editor files
 .DS_Store
@@ -65,3 +67,6 @@ Thumbs.db
 
 # Notebook caches
 notebooks/cache/
+output/*
+!output/catBoost/
+!output/catBoost/**

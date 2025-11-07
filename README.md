@@ -36,6 +36,36 @@ Quickstart (developer machine)
    - `featureEngineering.ipynb` (compute indices, GLCM, spatial lag)
    - `dasymetricMapping.ipynb` (fractional assignment, train model, predict)
 
+  CatBoost methodology (new)
+  - We added a CatBoost-based regression model notebook (`notebooks/catBoostDasymetric.ipynb`) that mirrors the Random Forest pipeline but leverages CatBoost’s gradient-boosted decision trees, which:
+    - handle categorical features natively (if present),
+    - are robust on heterogeneous/tabular datasets,
+    - often deliver strong accuracy with minimal preprocessing.
+
+  How to run the CatBoost notebook
+  1. Install dependencies: `pip install -r requirements.txt` (CatBoost is included as a dependency).
+  2. Ensure required inputs are present under `assets/` (ignored in git) in the same structure used by the Random Forest notebook.
+  3. Open `notebooks/catBoostDasymetric.ipynb` and run all cells. The notebook will:
+     - perform dataset validation and preprocessing,
+     - train CatBoost with cross-validation,
+     - save tabular outputs (CSV) to `output/catBoost/data/`,
+     - save visualizations (PNG) to `output/catBoost/visualizations/`,
+     - copy Random Forest outputs for comparison into `output/catBoost/randomForest_outputs/` and produce a `randomForest_output_list.md` describing them.
+
+  Output directory layout (updated)
+  ```
+  output/
+    catBoost/
+      data/                # CSV: metrics, feature importances, predictions, CV results
+      visualizations/      # PNG: feature importance, residuals, predicted vs actual plots
+      randomForest_outputs/
+        randomForest_output_list.md  # Markdown listing RF outputs with brief descriptions
+        ... (copied RF outputs for comparison)
+  ```
+
+  Comparison with Random Forest outputs
+  - The CatBoost notebook automatically compiles a list of Random Forest outputs for side-by-side inspection. These are copied into `output/catBoost/randomForest_outputs/` to simplify comparisons during review.
+
 Reproducibility notes
 - Fractional assignment: grid cells contribute to overlapping barangays by area-weighted fractions to avoid losing information from small administrative units.
 - Geography-aware imputation: DBSCAN zoning and zone-specific rules reduce bias from missing OSM-derived features.
