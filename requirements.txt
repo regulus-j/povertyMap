@@ -14,6 +14,7 @@ jupyterlab
 notebook
 tqdm
 seaborn
+catboost
 
 # Optional / system packages that may be required for some installs (Linux/conda recommended):
 # gdal, libspatialindex
