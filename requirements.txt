@@ -1,0 +1,19 @@
+pandas
+numpy
+geopandas
+rasterio
+shapely
+rtree
+pyproj
+scikit-learn
+scikit-image
+matplotlib
+folium
+earthengine-api
+jupyterlab
+notebook
+tqdm
+seaborn
+
+# Optional / system packages that may be required for some installs (Linux/conda recommended):
+# gdal, libspatialindex

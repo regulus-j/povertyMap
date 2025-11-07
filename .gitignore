@@ -44,6 +44,16 @@ searchable_files.txt
 unused_deprecated_report.json
 workflow_methodology.html
 
+# Allow small placeholders in these directories so structure is visible in git
+!assets/.gitkeep
+!assets/README.md
+!assets/shapefile/.gitkeep
+!assets/csv_outputs/.gitkeep
+!assets/googleEarthExports/.gitkeep
+!data/.gitkeep
+!data/satellite_imagery/.gitkeep
+!notebooks/.gitkeep
+
 # OS and editor files
 .DS_Store
 Thumbs.db
@@ -52,3 +62,6 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Notebook caches
+notebooks/cache/
