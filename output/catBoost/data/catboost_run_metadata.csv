@@ -1,0 +1,2 @@
+dataset,target,n_samples,n_features,n_categorical,cv_r2_mean,cv_mae_mean,cv_rmse_mean
+..\assets\grid_with_comprehensive_data.csv,poverty_rate,1724,67,3,0.9849229831837476,0.005120042171985023,0.012165405217187033

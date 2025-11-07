@@ -70,3 +70,7 @@ notebooks/cache/
 output/*
 !output/catBoost/
 !output/catBoost/**
+!output/randomForest/
+!output/randomForest/**
+!output/comparison/
+!output/comparison/**
