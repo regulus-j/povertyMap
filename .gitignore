@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+venv/
+env/
+.venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints/
+
+# Data and large raster/vector assets (do NOT commit large data files)
+assets/
+data/
+data/**
+*.tif
+*.tiff
+*.vrt
+*.kea
+*.gpkg
+*.shp
+*.dbf
+*.prj
+*.shx
+*.qmd
+*.geojson
+
+# Dataprep caches and large exports
+dataprep/cache/
+assets/googleEarthExports/
+
+# Notebook outputs and generated HTML (keeps repo small)
+dataprep/*.html
+*.html
+
+# Project analysis artifacts (generated during workspace analysis)
+assets_unused.json
+file_metadata.tsv
+file_usage_counts.tsv
+searchable_files.txt
+unused_deprecated_report.json
+workflow_methodology.html
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs
+*.log
