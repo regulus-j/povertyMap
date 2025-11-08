@@ -44,10 +44,23 @@ searchable_files.txt
 unused_deprecated_report.json
 workflow_methodology.html
 
+# Notebook output directories
+notebooks/cache/
+notebooks/catboost_info/
+notebooks/output/
+output/
+
+# Comparison and visualization outputs
+output/comparison/
+output/catBoost/
+output/randomForest/
+
 # Allow small placeholders in these directories so structure is visible in git
 !assets/.gitkeep
 !assets/README.md
 !assets/shapefile/.gitkeep
+!output/.gitkeep
+!output/README.md
 !assets/csv_outputs/.gitkeep
 !assets/googleEarthExports/.gitkeep
 !data/.gitkeep
